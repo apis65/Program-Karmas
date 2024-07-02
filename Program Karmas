@@ -1,1 +1,435 @@
+list_karmas = {}
+
+def input_data():
+    nama = input("Nama Lengkap : ")
+    nim = input("NIM : ")
+    tanggal_lahir = input("Tanggal Lahir (xx) : ")
+    print("\nPilih Bulan Lahir Anda")
+    print("[1] Januari\n[2] Februari\n[3] Maret\n[4] April\n[5] Mei\n[6] Juni\n[7] Juli\n[8] Agustus\n[9] September\n[10] Oktober\n[11] November\n[12] Desember")
+    while True:
+        pilihan = int(input("Pilihan >> "))
+        if pilihan == 1:
+            bulan = "Januari"
+            break
+        elif pilihan == 2:
+            bulan = "Februari"
+            break
+        elif pilihan == 3:
+            bulan = "Maret"
+            break
+        elif pilihan == 4:
+            bulan = "April"
+            break
+        elif pilihan == 5:
+            bulan = "Mei"
+            break
+        elif pilihan == 6:
+            bulan = "Juni"
+            break
+        elif pilihan == 7:
+            bulan = "Juli"
+            break
+        elif pilihan == 8:
+            bulan = "Agustus"
+            break
+        elif pilihan == 9:
+            bulan = "September"
+            break
+        elif pilihan == 10:
+            bulan = "Oktober"
+            break
+        elif pilihan == 11:
+            bulan = "November"
+            break
+        elif pilihan == 12:
+            bulan = "Desember"
+            break
+        else:
+            print("Pilihan bulan tidak valid, silakan coba lagi")
+    tahun_lahir = input("Tahun Lahir : ")
+    tgl_lahir = f"{tanggal_lahir} {bulan} {tahun_lahir}"
+    print("\nPilih Fakultas Anda")
+    print("[1] FIB\n[2] FH\n[3] FISIPOL\n[4] FEB\n[5] FKIP\n[6] FT\n[7] FK\n[8] FMIPA\n[9] FSRD\n[10] FP\n[11] FAPET\n[12] FKOR\n[13] FPSI\n[14] FATISDA")
+    while True:
+        pilihan = int(input("Pilihan >> "))
+        if pilihan == 1:
+            fakultas = "Ilmu Budaya"
+            print("1. Sastra Daerah\n2. Sastra Indonesia\n3. Sastra Inggris\n4. Ilmu Sejarah\n5. Sastra Arab\n6. Bahasa Mandarin dan Kebudayaan Tiongkok")
+            x = int(input("Pilihan >> "))
+            if x == 1:
+                prodi = "Sastra Daerah"
+                break
+            elif x == 2:
+                prodi = "Sastra Indonesia"
+                break
+            elif x == 3:
+                prodi = "Sastra Inggris"
+                break
+            elif x == 4:
+                prodi = "Ilmu Sejarah"
+                break
+            elif x == 5:
+                prodi = "Sastra Arab"
+                break
+            elif x == 6:
+                prodi = "Bahasa Mandarin dan Kebudayaan Tiongkok"
+                break
+            else:
+                print("Pilihan tidak valid, silakan coba lagi")
+        elif pilihan == 2:
+            fakultas = "Hukum"
+            print("1. Ilmu Hukum")
+            x = int(input("Pilihan >> "))
+            if x == 1:
+                prodi = "Ilmu Hukum"
+                break
+            else:
+                print("Pilihan tidak valid, silakan coba lagi")
+        elif pilihan == 3:
+            fakultas = "Ilmu Sosial Dan Ilmu Politik"
+            print("1. Ilmu Administrasi Negara\n2. Ilmu Komunikasi\n3. Sosiologi\n4. Hubungan Internasional")
+            x = int(input("Pilihan >> "))
+            if x == 1:
+                prodi = "Ilmu Administrasi"
+                break
+            elif x == 2:
+                prodi = "Ilmu Komunikasi"
+                break
+            elif x == 3:
+                prodi = "Sosiologi"
+                break
+            elif x == 4:
+                prodi = "Hubungan Internasional"
+                break
+            else:
+                print("Pilihan tidak valid, silakan coba lagi")
+        elif pilihan == 4:
+            fakultas = "Ekonomi Dan Bisnis"
+            print("1. Manajemen\n2. Akuntansi\n3. Ekonomi Pembangunan")
+            x = int(input("Pilihan >> "))
+            if x == 1:
+                prodi = "Manajemen"
+                break
+            elif x == 2:
+                prodi = "Akuntansi"
+                break
+            elif x == 3:
+                prodi = "Ekonomi Pembangunan"
+                break
+            else:
+                print("Pilihan tidak valid, silakan coba lagi")
+        elif pilihan == 5:
+            fakultas = "Keguruan Dan Ilmu Pendidikan"
+            print("1. BK\n2. Pend. Administrasi Perkantoran\n3. Pend. Matematika\n4. Pend. Luar Biasa\n5. Pend. Bahasa Dan Sastra Indonesia\n6. Pend. Teknik Bangunan\n7. PGSD\n8. Pend. Ekonomi\n9. Pend. Geografi\n10. Pend. Bahasa Jawa\n11. Pend. Bahasa Inggris\n12. Pend. Seni Rupa\n13. Pend. Fisika\n14. Pend. Kimia\n15. Pend. Biologi\n16. Pend. Sejarah\n17. Pend. Pancasila dan Kewarganegraan\n18. Pend. Sosiologi Antropologi\n19. Pend. Teknik Mesin\n20. Pend. Guru Pend. Anak Usia Dini\n21. Pend. Akuntansi\n22. Pend. Teknik Informatika & Komputer\n23. Pend. IPA\n24. Teknologi Pendidikan")
+            x = int(input("Pilihan >> "))
+            if x == 1:
+                prodi = "Bimbingan dan Konseling"
+                break
+            elif x == 2:
+                prodi = "Pendidikan Administrasi Perkantoran"
+                break
+            elif x == 3:
+                prodi = "Pendidikan Matematika"
+                break
+            elif x == 4:
+                prodi = "Pendidikan Luar Biasa"
+                break
+            elif x == 5:
+                prodi = "Pendidikan Bahasa Dan Sastra Indonesia"
+                break
+            elif x == 6:
+                prodi = "Pendidikan Teknik Bangunan"
+                break
+            elif x == 7:
+                prodi = "Pendidikan Guru Sekolah Dasar"
+                break
+            elif x == 8:
+                prodi = "Pendidikan Ekonomi"
+                break
+            elif x == 9:
+                prodi = "Pendidikan Geografi"
+                break
+            elif x == 10:
+                prodi = "Pendidikan Bahasa Jawa"
+                break
+            elif x == 11:
+                prodi = "Pendidikan Bahasa Inggris"
+                break
+            elif x == 12:
+                prodi = "Pendidikan Seni Rupa"
+                break
+            elif x == 13:
+                prodi = "Pendidikan Fisika"
+                break
+            elif x == 14:
+                prodi = "Pendidikan Kimia"
+                break
+            elif x == 15:
+                prodi = "Pendidikan Biologi"
+                break
+            elif x == 16:
+                prodi = "Pendidikan Sejarah"
+                break
+            elif x == 17:
+                prodi = "Pendidikan Pancasila Dan Kewarganegaraan"
+                break
+            elif x == 18:
+                prodi = "Pendidikan Sosiologi Antropologi"
+                break
+            elif x == 19:
+                prodi = "Pendidikan Teknik Mesin"
+                break
+            elif x == 20:
+                prodi = "Pendidikan Guru Pendidikan Anak Usia Dini"
+                break
+            elif x == 21:
+                prodi = "Pendidikan Akuntansi"
+                break
+            elif x == 22:
+                prodi = "Pendidikan Teknik Informatika & Komputer"
+                break
+            elif x == 23:
+                prodi = "Pendidikan Ilmu Pengetahuan Alam"
+                break
+            elif x == 24:
+                prodi = "Teknologi Pendidikan"
+                break
+            else:
+                print("Pilihan tidak valid, silakan coba lagi")
+        elif pilihan == 6:
+            fakultas = "Teknik"
+            print("1. Teknik Sipil\n2. Arsitektur\n3. Perencanaan Wilayah Dan Kota\n4. Teknik Mesin\n5. Teknik Kimia\n6. Teknik Industri\n7. Teknik Elektro\n")
+            x = int(input("Pilihan >> "))
+            if x == 1:
+                prodi = "Teknik Sipil"
+                break
+            elif x == 2:
+                prodi = "Arsitektur"
+                break
+            elif x == 3:
+                prodi = "Perencanaan Wilayah Dan Kota"
+                break
+            elif x == 4:
+                prodi = "Teknik Mesin"
+                break
+            elif x == 5:
+                prodi = "Teknik Kimia"
+                break
+            elif x == 6:
+                prodi = "Teknik Industri"
+                break
+            elif x == 7:
+                prodi = "Teknik Elektro"
+                break
+            else:
+                print("Pilihan tidak valid, silakan coba lagi")
+        elif pilihan == 7:
+            fakultas = "Kedokteran"
+            print("1. Kedokteran\n2. Kebidanan")
+            x = int(input("Pilihan >> "))
+            if x == 1:
+                prodi = "Kedokteran"
+                break
+            if x == 2:
+                prodi = "Kebidanan"
+                break
+            else:
+                print("Pilihan tidak valid, silakan coba lagi")
+        elif pilihan == 8:
+            fakultas = "Matematika Dan Ilmu Pengetahuan Alam"
+            print("1. Matematika\n2. Fisika\n3. Kimia\n4. Biologi\n5. Farmasi\n6. Statistika\n7. Ilmu Lingkungan")
+            x = int(input("Pilihan >> "))
+            if x == 1:
+                prodi = "Matematika"
+                break
+            elif x == 2:
+                prodi = "Fisika"
+                break
+            elif x == 3:
+                prodi = "Kimia"
+                break
+            elif x == 4:
+                prodi = "Biologi"
+                break
+            elif x == 5:
+                prodi = "Farmasi"
+                break
+            elif x == 6:
+                prodi = "Statistika"
+                break
+            elif x == 7:
+                prodi = "Ilmu Lingkugan"
+                break
+            else:
+                print("Pilihan tidak valid, silakan coba lagi")
+        elif pilihan == 9:
+            fakultas = "Seni Rupa Dan Desain"
+            print("1. Seni Rupa Murni\n2. DKV\n3. Desain Interior\n4. Kriya Murni")
+            x = int(input("Pilihan >> "))
+            if x == 1:
+                prodi = "Seni Rupa Murni"
+                break
+            elif x == 2:
+                prodi = "Desain Komunikasi Visual"
+                break
+            elif x == 3:
+                prodi = "Desain Interior"
+                break
+            elif x == 4:
+                prodi = "Kriya Murni"
+                break
+            else:
+                print("Pilihan tidak valid, silakan coba lagi")
+        elif pilihan == 10:
+            fakultas = "Pertanian"
+            print("1. Agroteknologi\n2. Agribisnis\n3. Penyuluhan Dan Komunikasi Pertanian\n4. Ilmu Teknologi Pangan\n5. Ilmu Tanah\n6. Pengelolaan Tanaman\n7. Proteksi Tanaman")
+            x = int(input("Pilihan >> "))
+            if x == 1:
+                prodi = "Agroteknologi"
+                break
+            elif x == 2:
+                prodi = "Agribisnis"
+                break
+            elif x == 3:
+                prodi = "Penyuluhan Dan Komunikasi Pertanian"
+                break
+            elif x == 4:
+                prodi = "Ilmu Teknlogi Pangan"
+                break
+            elif x == 5:
+                prodi = "Ilmu Tanah"
+                break
+            elif x == 6:
+                prodi = "Pengelolaan Tanaman"
+                break
+            elif x == 7:
+                prodi = "Proteksi Tanaman"
+                break
+            else:
+                print("Pilihan tidak valid, silakan coba lagi")
+        elif pilihan == 11:
+            fakultas = "Peternakan"
+            print("1. Peternakan")
+            x = int(input("Pilihan >> "))
+            if x == 1:
+                prodi = "Peternakan"
+                break
+            else:
+                print("Pilihan tidak valid, silakan coba lagi")
+        elif pilihan == 12:
+            fakultas = "Keolahragaan"
+            print("1. Pendidikan Jasmani, Kesehatan Dan Rekreasi\n2. Pendidikan Kepelatihan Olahraga")
+            x = int(input("Pilihan >> "))
+            if x == 1:
+                prodi = "Pendidikan Jasmani, Kesehatan Dan Rekreasi"
+                break
+            elif x == 2:
+                prodi = "Pendidikan Kepelatihan Olahraga"
+                break
+            else:
+                print("Pilihan tidak valid, silakan coba lagi")
+        elif pilihan == 13:
+            fakultas = "Psikologi"
+            print("1. Psikologi")
+            x = int(input("Pilihan >> "))
+            if x == 1:
+                prodi = "Psikologi"
+                break
+            else:
+                print("Pilihan tidak valid, silakan coba lagi")
+        elif pilihan == 14:
+            fakultas = "Teknologi Informasi dan Sains Data"
+            print("1. Informatika\n2. Sains Data")
+            x = int(input("Pilihan >> "))
+            if x == 1:
+                prodi = "Informatika"
+                break
+            elif x == 2:
+                prodi = "Sains Data"
+                break
+            else:
+                print("Pilihan tidak valid, silakan coba lagi")
+        else:
+            print("Pilihan tidak valid, silakan coba lagi")
+    print("Apakah Data yang Dimasukkan Sudah Benar?\n1. Sudah\n2. Belum ")
+    x = int(input("Pilihan >> "))
+    if x == 2:
+        input_data()
+    elif x == 1:
+        print("")
+    else:
+        print("Pilihan tidak valid, silakan coba lagi")
+    nomor_kartu = len(list_karmas) + 1
+    list_karmas[nomor_kartu] = {
+        "nama": nama,
+        "nim": nim,
+        "tgl_lahir": tgl_lahir,
+        "prodi": prodi,
+        "fakultas": fakultas
+    }
+    print(f"Anda mendapatkan nomor kartu  {nomor_kartu}")
+
+def cetak_kartu(nomor_kartu):
+    kartu = list_karmas.get(nomor_kartu)
+    if kartu:
+        print('{0}Kartu Mahasiswa {0}'.format(' '*25))
+        print('{0}'.format('_'*80))
+        print('|    ______  {0}|'.format(' '*66))
+        print('|   |      | {0}{1}{2}|'.format(' '*10,'KEMENTRIAN PENDIDIKAN, KEBUDAYAAN,',' '*22))
+        print('|   | LOGO | {0}{1}{2}|'.format(' '*17,'RISET, DAN TEKNOLOGI',' '*29))
+        print('|   |______| {0}{1}{2}|'.format(' '*14,'UNIVERSITAS  SEBELAS MARET',' '*26))
+        print('|{0}{1}{0}|'.format(' '*7,'JL. Ir. Sutami 36 A Kentingan Surakarta 57126, Telp. 0271 646994'))
+        print('|{0}|'.format('='*78))
+        print('|  ______________{0}|'.format(' '*62))
+        nama='|  Nama             :  {0}'.format(kartu["nama"])
+        print('|  |            {0}{1}|'.format(nama,' '*int(63-int(len(nama)))))
+        nim='|  NIM              :  {0}'.format(kartu["nim"])
+        print('|  |            {0}{1}|'.format(nim,' '*int(63-int(len(nim)))))
+        tgl_lahir='|  Tgl. Lahir       :  {0}'.format(kartu["tgl_lahir"])
+        print('|  |    FOTO    {0}{1}|'.format(tgl_lahir,' '*int(63-int(len(tgl_lahir)))))
+        prodi='|  Prodi            :  {0}'.format(kartu["prodi"])
+        print('|  |            {0}{1}|'.format(prodi,' '*int(63-int(len(prodi)))))
+        fakultas='|  Fakultas         :  {0}'.format(kartu["fakultas"])
+        print('|  |            {0}{1}|'.format(fakultas,' '*int(63-int(len(fakultas)))))
+        print('|  |____________|{0}|'.format(' '*62))
+        print('|_________________________________       {0}   |'.format('_'*35))
+        print('|                                 \     |{0}|  |'.format(' '*35))
+        print('|  KARTU MAHASISWA                 \    |{0}{1}{0}|  |'.format(' '*14,'BARCODE'))
+        print('|  SARJANA                          \   |{0}|  |'.format('_'*35))
+        print('|____________________________________\{0}|'.format('_'*41))
+    else:
+        print("Maaf, Nomor Kartu Tidak Ditemukan")
+
+def hapus_kartu():
+    nomor_kartu = int(input("Masukan Nomor Kartu yang Ingin Dihapus : "))
+    if nomor_kartu in list_karmas:
+        del list_karmas[nomor_kartu]
+        print(f"Kartu Mahasiswa dengan nomor {nomor_kartu} telah dihapus")
+    else:
+        print("Maaf, nomor kartu tidak ditemukan")
+
+while True:
+    print("===========================================")
+    print(" Selamat Datang di Program Kartu Mahasiswa ")
+    print("===========================================")
+    print("Daftar Menu Utama:")
+    print("1. Input Data")
+    print("2. Cetak Kartu")
+    print("3. Hapus Kartu")
+    print("4. Keluar")
+    y = input("Pilih Menu: ")
+    if y == "1":
+        input_data()
+    elif y == "2":
+        nomor_kartu = int(input("Masukan Nomor Kartu yang Ingin Dicetak : "))
+        cetak_kartu(nomor_kartu)
+    elif y == "3":
+        hapus_kartu()
+    elif y == "4":
+        print("======================================================")
+        print("Terima kasih Telah Menggunakan Program Kartu Mahasiswa")
+        print("======================================================")
+        break
+    else:
+        print("Maaf, menu tidak tersedia")
 
